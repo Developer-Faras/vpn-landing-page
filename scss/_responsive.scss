@@ -1,0 +1,549 @@
+// Responsive Css
+
+// Laptop 1024px To 992px LG
+@media (max-width:10024px) and (min-width: 992px) {
+    // All Components
+    .container{
+        max-width: 940px;
+    }
+
+
+
+    // All Sections
+    #testimonials{
+        .content{
+            .slider-wraper{
+                .slides{
+                    .sildes-wraper{
+                        .item{
+                            display: block;
+                            width: 290px;
+                            height: 270px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Tablet 991px to 768px MD
+@media (max-width: 991px) {
+    // All Components
+    .container{
+        max-width: 720px;
+    }
+
+    section{
+        &.padd{
+            padding: 60px 0;
+        }
+    }
+
+
+    // All Sections
+    #main-header{
+        .header-content{
+            ul.btn-wraper{
+                display: none;
+            }
+        }
+        
+    }
+
+    #hero{
+        height: 480px;
+
+        .hero-content{
+            position: relative;
+
+            .text-box{
+                width: 100%;
+                position: relative;
+                z-index: 10;
+                text-align: center;
+            }
+
+            .img-box{
+                position: absolute;
+                z-index: 5;
+                width: 100%;
+
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.6);
+                    z-index: 100;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    #journey{
+        .journey-content{
+            padding: 0 10px;
+        }
+    }
+
+    #about{
+        .about-content{
+            flex-wrap: wrap;
+
+            .img{
+                width: 70%;
+                margin-bottom: 20px;
+            }
+            .text{
+                width: 100%;
+                padding: 20px 80px;
+                text-align: center;
+
+                .list li{
+                    justify-content: center;
+
+                    .list-text{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #pricing{
+        .pricing-content{
+            .item{
+                width: 32%;
+            }
+        }
+    }
+
+    #clients{
+        .item img{
+            width: 100%;
+        }
+    }
+
+    #subscribe{
+        margin-top: 30px;
+
+        .content{
+            padding: 40px 30px;
+
+            .section-header{
+                width: auto;
+            }
+
+            .right .subs-btn{
+                width: 220px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Mobile 767px
+@media (max-width: 767px) and (min-width: 600px) {
+    // All Components
+    .container{
+        max-width: 580px;
+    }
+
+
+
+    // All Sections
+    #main-header{
+        .header-content ul li{
+            padding: 0 5px;
+        }
+    }
+
+    #hero{
+        position: relative;
+
+        .hero-content{
+            position: static;
+
+            .img-box{
+                left: 0;
+            }
+        }
+    }
+
+    #journey{
+        .journey-content .journey-card{
+            padding: 28px 20px;
+        }
+    }
+
+    #about{
+        .about-content .img{
+            width: 90%;
+        }
+    }
+    
+    #pricing{
+        .pricing-content{
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .item{
+                width: 48%;
+                margin: 0 5px 20px 5px;
+            }
+        }
+    }
+
+    #testimonials{
+        .content .slider-wraper .slides .sildes-wraper .item{
+            width: auto;
+        }
+    }
+
+    #subscribe{
+        .content .section-header .title{
+            width: auto;
+        }
+    }
+
+    #main-footer{
+        .content .right .list{
+            &:last-child{
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Laptop 1024px
+@media (max-width: 599px){
+    // All Components
+    .container{
+        width: 300px!important;
+    }
+
+    section{
+        &.padd{
+            padding: 40px 0;
+        }
+
+        .section-header{
+            width: 100%;
+            padding: 0px 10px;
+
+            .title{
+                font-size: 26px;
+            }
+            .desc{
+                font-size: 13px;
+            }
+        }
+
+    }
+
+
+    // All Sections
+    #main-header{
+
+        .header-content{
+            position: relative;
+            z-index: 100;
+        }
+
+        #mobile-menu-toggler{    
+            display: block;
+            font-size: 22px;
+            font-weight: bolder;
+            cursor: pointer;
+            color: $color-black;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: $color-red;
+            }
+        }
+
+        ul{
+            &.nav-menu{
+                display: none;
+            }
+            &.btn-wraper{
+                display: none;
+            }
+        }
+
+        // Mobile Menu Desine
+        .mobile-menu{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            visibility: hidden;
+            opacity: 0;
+            background: #ddd;
+            z-index: -1;
+            padding: 30px 0;
+            height: auto;
+            transition: all 0.6s ease;
+
+            &.show{
+                visibility: visible;
+                opacity: 1;
+            }
+
+            ul{
+                flex-direction: column;
+
+                li{
+                    display: block;
+                    padding: 10px 0;
+
+                    &.btn-items{
+                        display: block;
+                        margin-top: 20px;
+
+                        &:last-child{
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    #hero{
+        height: auto;
+        padding-top: 140px;
+        padding-bottom: 70px;
+
+        .hero-content{
+            .text-box{
+                .heading{
+                    display: block;
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                .desc{
+                    font-size: 14px;
+                }
+                .btn-started{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    #journey{
+        .journey-content{
+            flex-wrap: wrap;
+            height: auto;
+            padding: 20px;
+
+            .journey-card{
+                width: 100%;
+                justify-content: center;
+
+                .text{
+                    .title{
+                        font-size: 22px;
+                    }
+                    .dec{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about{
+        padding-bottom: 0;
+
+        .about-content{
+            .img{
+                width: 100%;
+            }
+            .text{
+                padding: 30px;
+
+                .title{
+                    font-size: 22px;
+                    line-height: 36px;
+                }
+                .dec{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    #pricing{
+        padding-bottom: 10px;
+
+        .pricing-content{
+            flex-wrap: wrap;
+
+            .item{
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                height: auto;
+            }
+        }
+    }
+
+    #area{
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+
+    #clients{
+        .clients-content{
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .item{
+                margin: 10px;
+                width: 40%;
+            }
+        }
+    }
+
+    #testimonials{
+        .content{
+            .slider-wraper {
+                .slides .sildes-wraper .item{
+                    width: 100%;
+                    margin: 0;
+                    .bottom .desc{
+                        font-size: 15px;
+                    }
+                }
+                .nav{
+                    padding: 24px 0;
+        
+                    .dots{
+                        button{
+                            width: 10px;
+                            height: 10px;
+                            margin: 0 3px;
+        
+                            &.active{
+                                width: 20px;
+                            }
+                        }
+                    }
+                    .btns{
+                        button{
+                            width: 30px;
+                            height: 30px;
+        
+                            span{
+                                font-size: 26px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #subscribe{
+        .content{
+            padding: 30px 10px;
+            flex-direction: column;
+
+            .left{
+                width: 100%;
+
+                .section-header{
+                    .title{
+                        width: 100%;
+                        text-align: center;
+                        font-size: 22px;
+                        line-height: 36px;
+                    }
+                    .desc{
+                        display: none;
+                    }
+                }
+            }
+
+            .right{
+                .subs-btn{
+                    width: 210px;
+                    height: 52px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    #main-footer{
+        padding-bottom: 10px;
+
+        .content{
+            flex-direction: column;
+
+            .left{
+                width: 100%;
+                text-align: center;
+                padding: 0px;
+
+                .sosial{
+                    justify-content: center;
+                }
+
+                .copy-text{
+                    display: none;
+                }
+
+            }
+            .right{
+                flex-direction: column;
+                width: 100%;
+
+                .list{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mobile-copy{
+            display: block;
+            width: 100%;
+
+            .copy-text{
+                display: block;
+                text-align: center;
+                font-size: 16px;
+                font-family: $font-rubic;
+                color: $color-gray;
+                padding: 25px 0 12px 0;
+
+                a{
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+}
