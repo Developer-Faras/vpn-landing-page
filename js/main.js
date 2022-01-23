@@ -11,7 +11,7 @@ $(document).ready(function(){
     slider.owlCarousel({
         items: 3,
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         autoplayTimeout: 4000,
         nav: true,
         dots: true,
